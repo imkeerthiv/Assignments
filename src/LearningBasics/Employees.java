@@ -6,10 +6,15 @@ public class Employees {
 		• Employee Names: "Bharath", "ABC", "XYZ"
 		• Employee IDs: 1234, 1235, 1236 */
 		
-		String emp1="Bharath";
-		String emp2 ="ABC";
-		String emp3 ="XYZ";
-		int id1= 1234;
-		int id2= 1235;
-		int id3= 1236;
+//		String emp1="Bharath";
+//		String emp2 ="ABC";
+//		String emp3 ="XYZ";
+	
+	String [] empnames= {"Bharath", "ABC", "XYZ"};
+	
+//		int id1= 1234;
+//		int id2= 1235;
+//		int id3= 1236;
+	
+	int [] ids={1234, 1235, 1236};
 	}
