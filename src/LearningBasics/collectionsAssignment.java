@@ -4,62 +4,93 @@ public class collectionsAssignment {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		 Map<String, List<Map<String, String>>> collectionsAssignment = new HashMap<>();
-		 List<Map<String, String>> productDetails = new ArrayList<>();
+	Map<String, String> student1= new HashMap<String,String>();
 
-	        Map<String, String> product1 = new HashMap<>();
+
+    student1.put("Name", "John Doe");
+    student1.put("Age", "20");
+    student1.put("Gender", "Male");
+    student1.put("RollNo", "SBA12345");
+    student1.put("Grade", "A++");
+    student1.put("Major", "Computer Science");
+    student1.put("GPA", "A3.8");
+    student1.put("Email", "john@example.com");
+    student1.put("PAN", "SDF6543210");
+    student1.put("Address", "123 Elm St");
+
+    Map<String, String>student2 = new HashMap<String,String>();
+    student2.put("Name", "Jane Smith");
+    student2.put("Age", "21");
+    student2.put("Gender", "Female");
+    student2.put("RollNo", "SBA12346");
+    student2.put("Grade", "B+");
+    student2.put("Major", "Mathematics");
+    student2.put("GPA", "A3.5");
+    student2.put("Email", "jane@example.com");
+    student2.put("PAN", "REW6543211");
+    student2.put("Address", "456 Oak St");
+
+    Map<String, String> student3 = new HashMap<String,String>();
+    student3.put("Name", "Mike Brown");
+    student3.put("Age", "22");
+    student3.put("Gender", "Male");
+    student3.put("RollNo", "SBA12347");
+    student3.put("Grade", "A+");
+    student3.put("Major", "Physics");
+    student3.put("GPA", "A3.9");
+    student3.put("Email", "mike@example.com");
+    student3.put("PAN", "TYR6543212");
+    student3.put("Address", "789 Pine St");
+    
+    List<Map<String,String>> studentList=new ArrayList<Map<String,String>>();
+    studentList.add(student1);
+    studentList.add(student2);
+    studentList.add(student3);
+    System.out.println("Student List: "+studentList);
+    
+    
+    Map<String,String> product1=new HashMap<String,String>();
+    
 	        product1.put("Product ID", "P001");
 	        product1.put("Name", "Laptop");
 	        product1.put("Category", "Electronics");
 	        product1.put("Price", "$1,200");
+	        product1.put("Stock Quantity", "Not Available");
 	        product1.put("Supplier", "Tech Supplies");
+	        product1.put("Warranty", "2 years");
+	        product1.put("Rating", "4.5 Stars");
+	        product1.put("Manufacturing Date", "Aug 2023");
+	        product1.put("Expiry Date", "Aug 2028");
 
 	        Map<String, String> product2 = new HashMap<>();
 	        product2.put("Product ID", "P002");
 	        product2.put("Name", "Desk Chair");
 	        product2.put("Category", "Furniture");
 	        product2.put("Price", "$150");
+	        product2.put("Stock Quantity", "Two");
 	        product2.put("Supplier", "Office Depot");
+	        product2.put("Warranty", "1 year");
+	        product2.put("Rating", "4 Stars");
+	        product2.put("Manufacturing Date", "Sep 2024");
+	        product2.put("Expiry Date", "N/A");
 
 	        Map<String, String> product3 = new HashMap<>();
 	        product3.put("Product ID", "P003");
 	        product3.put("Name", "Coffee Maker");
 	        product3.put("Category", "Kitchen");
 	        product3.put("Price", "$75");
+	        product3.put("Stock Quantity", "Two Hundred");
 	        product3.put("Supplier", "KitchenWorld");
+	        product3.put("Warranty", "6 months");
+	        product3.put("Rating", "4.2 Stars");
+	        product3.put("Manufacturing Date", "Jan 2025");
+	        product3.put("Expiry Date", "Jan 2027");
 
-	        productDetails.add(product1);
-	        productDetails.add(product2);
-	        productDetails.add(product3);
-	        
-	        collectionsAssignment.put("Product Details", productDetails);
-	        List<Map<String, String>> studentDetails = new ArrayList<>();
+	        List<Map<String,String>> productList = new ArrayList<Map<String,String>>();
+	        productList.add(product1);
+	        productList.add(product2);
+	        productList.add(product3);
 
-	        Map<String, String> student1 = new HashMap<>();
-	        student1.put("Name", "John Doe");
-	        student1.put("Age", "20");
-	        student1.put("Major", "Computer Science");
-	        student1.put("Email", "john@example.com");
-
-	        Map<String, String> student2 = new HashMap<>();
-	        student2.put("Name", "Jane Smith");
-	        student2.put("Age", "21");
-	        student2.put("Major", "Mathematics");
-	        student2.put("Email", "jane@example.com");
-
-	        Map<String, String> student3 = new HashMap<>();
-	        student3.put("Name", "Mike Brown");
-	        student3.put("Age", "22");
-	        student3.put("Major", "Physics");
-	        student3.put("Email", "mike@example.com");
-
-	        studentDetails.add(student1);
-	        studentDetails.add(student2);
-	        studentDetails.add(student3);
-
-	        collectionsAssignment.put("Student Details", studentDetails);
-	        
-	        List<Map<String, String>> employeeDetails = new ArrayList<>();
 
 	        Map<String, String> emp1 = new HashMap<>();
 	        emp1.put("Employee ID", "E001");
@@ -75,21 +106,19 @@ public class collectionsAssignment {
 	        emp3.put("Employee ID", "E003");
 	        emp3.put("Name", "Carol White");
 	        emp3.put("Department", "Sales");
+      List<Map<String,String>> employeeList = new ArrayList<Map<String,String>>();
+	        employeeList.add(emp1);
+	        employeeList.add(emp2);
+	        employeeList.add(emp3);
 
-	        employeeDetails.add(emp1);
-	        employeeDetails.add(emp2);
-	        employeeDetails.add(emp3);
-
-	        collectionsAssignment.put("Employee Details", employeeDetails);
+	 //To access all three list
+	        Map<String,List<Map<String,String>>> data = new HashMap<String, List<Map<String,String>>>();
+	        data.put("StudentData", studentList);
+	        data.put("ProductData", productList);
+	        data.put("EmployeeData", employeeList);
 	        
-	        System.out.println("Product Details > Supplier Name = Office Depot");
-
-	        List<Map<String, String>> products = collectionsAssignment.get("Product Details");
-
-	        for (Map<String, String> product : products) {
-	            if ("Office Depot".equals(product.get("Supplier"))) {
-	                System.out.println("Product Found: " + product);
+	                System.out.println("All Data List :" + data);
+	                System.out.println("---------------------------------");
+	                System.out.println("Supplier Name of Office Depot is :" +data.get("ProductData").get(1).get("Supplier"));
 	            }
-	        }
-	}
 }
